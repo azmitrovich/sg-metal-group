@@ -1,7 +1,7 @@
 import type { Locale } from "../i18n";
 import { useI18n } from "../i18n";
 
-const locales: Locale[] = ["en", "ru", "cs"];
+const locales: Locale[] = ["en", "cs"];
 
 export function LanguageSwitcher() {
   const { locale, setLocale, t } = useI18n();

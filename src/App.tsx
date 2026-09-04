@@ -13,9 +13,9 @@ import { StickyCta } from "./components/StickyCta";
 
 function readLocale(): Locale {
   const saved = localStorage.getItem("sg-locale");
-  if (saved === "en" || saved === "ru" || saved === "cs") return saved;
+  if (saved === "en" || saved === "cs") return saved;
   const lang = navigator.language.slice(0, 2);
-  if (lang === "ru" || lang === "cs") return lang;
+  if (lang === "cs") return lang;
   return "en";
 }
 
