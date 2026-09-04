@@ -1,0 +1,130 @@
+.hero {
+  min-height: 100svh;
+  display: grid;
+  align-items: end;
+  padding: calc(var(--header-h) + 2rem) 0 3.5rem;
+  position: relative;
+  color: var(--color-surface);
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(13, 28, 21, 0.45) 0%, rgba(13, 28, 21, 0.82) 55%, rgba(13, 28, 21, 0.95) 100%),
+    url("/hero.jpg")
+      center / cover no-repeat;
+  animation: hero-zoom 18s var(--ease) infinite alternate;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 8vw, 5.2rem);
+  max-width: 12ch;
+  margin: 0.85rem 0 1.1rem;
+  animation: rise 0.9s var(--ease) both;
+}
+
+.hero__text {
+  max-width: 42ch;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  color: rgba(242, 241, 236, 0.82);
+  animation: rise 0.9s var(--ease) 0.12s both;
+}
+
+.hero .link-row {
+  animation: rise 0.9s var(--ease) 0.22s both;
+}
+
+.hero__scroll {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(242, 241, 236, 0.55);
+  writing-mode: vertical-rl;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 720px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feature {
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.section--dark .feature {
+  border-top-color: var(--color-line-dark);
+}
+
+.feature__title {
+  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+}
+
+.feature__text {
+  color: var(--color-ink-soft);
+  max-width: 36ch;
+}
+
+.section--dark .feature__text {
+  color: rgba(242, 241, 236, 0.7);
+}
+
+.bullet-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.bullet-list li {
+  display: grid;
+  grid-template-columns: 1.1rem 1fr;
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.bullet-list li::before {
+  content: "▶";
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  margin-top: 0.35rem;
+}

@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #14291f;
+  --color-primary-deep: #0d1c15;
+  --color-accent: #b01e2a;
+  --color-accent-soft: #e8737d;
+  --color-ink: #15201a;
+  --color-ink-soft: #4a544d;
+  --color-surface: #f2f1ec;
+  --color-surface-alt: #dfdacd;
+  --color-line: rgba(20, 41, 31, 0.14);
+  --color-line-dark: rgba(242, 241, 236, 0.16);
+  --font-display: "Cabinet Grotesk", "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Satoshi", "DM Sans", ui-sans-serif, sans-serif;
+  --weight-display: 800;
+  --weight-body: 500;
+  --radius: 5px;
+  --radius-pill: 999px;
+  --section-y: clamp(4.5rem, 9vw, 7.5rem);
+  --measure: 65ch;
+  --header-h: 4.5rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}

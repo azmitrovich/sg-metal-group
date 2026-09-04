@@ -1,0 +1,123 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  transition: background 0.3s var(--ease), backdrop-filter 0.3s var(--ease);
+}
+
+.site-header.is-scrolled,
+.site-header.is-open {
+  background: color-mix(in srgb, var(--color-primary-deep) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.site-header__inner {
+  width: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: grid;
+  gap: 0;
+  line-height: 0.95;
+  color: var(--color-surface);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.logo__row {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.logo__bar {
+  width: 0.35rem;
+  height: 0.95rem;
+  background: var(--color-accent);
+  margin-bottom: 0.1rem;
+}
+
+.menu-toggle {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-content: center;
+  gap: 0.35rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 1.35rem;
+  height: 2px;
+  background: var(--color-surface);
+}
+
+.nav-panel {
+  position: fixed;
+  inset: var(--header-h) 0 0;
+  background: var(--color-primary-deep);
+  color: var(--color-surface);
+  padding: 2rem 1.25rem 3rem;
+  transform: translateY(-1rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  z-index: 40;
+  overflow: auto;
+}
+
+.nav-panel.is-open {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.nav-panel ol {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 2rem;
+}
+
+.nav-panel a {
+  display: flex;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  padding: 0.45rem 0;
+}
+
+.nav-panel__index {
+  color: var(--color-accent-soft);
+  font-size: 0.85em;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.lang-switch button {
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(242, 241, 236, 0.55);
+}
+
+.lang-switch button.is-active {
+  color: var(--color-surface);
+  background: rgba(242, 241, 236, 0.1);
+}
