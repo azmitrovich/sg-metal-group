@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { useI18n } from "../i18n";
+import { Button009 } from "./Button009";
 
 export function SectionContact() {
   const { t } = useI18n();
@@ -11,15 +12,15 @@ export function SectionContact() {
   }
 
   return (
-    <section className="section section--alt" id="contact">
-      <div className="wrap">
-        <p className="section__eyebrow">{t.nav[5].label}</p>
-        <h2 className="section__title">{t.contactTitle}</h2>
-        <p className="section__lead">{t.contactLead}</p>
+    <section className="on-putty" id="contact" data-theme="light" data-reveal>
+      <div className="container">
+        <div className="sec-head">
+          <p className="small-caps-label">{t.nav[5].label}</p>
+          <h2>{t.contactTitle}</h2>
+          <p className="soft">{t.contactLead}</p>
+        </div>
         {sent ? (
-          <p className="section__lead" style={{ marginTop: "2rem" }}>
-            {t.form.success}
-          </p>
+          <p className="soft">{t.form.success}</p>
         ) : (
           <form className="contact-form" onSubmit={onSubmit}>
             <label>
@@ -38,9 +39,7 @@ export function SectionContact() {
               {t.form.message} *
               <textarea name="message" required />
             </label>
-            <button className="btn" type="submit">
-              {t.form.submit} →
-            </button>
+            <Button009 type="submit">{t.form.submit}</Button009>
           </form>
         )}
       </div>

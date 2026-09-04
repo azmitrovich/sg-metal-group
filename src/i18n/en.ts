@@ -17,6 +17,18 @@ export const en: Messages = {
   heroText:
     "SG Metal Group sources metal products across the Middle East and Africa and brings them into the European Union — with financing, logistics and a clear CO₂ path built in.",
   scroll: "Scroll",
+  bands: [
+    {
+      label: "Trade versus friction",
+      claim: "Every month without a route is delay. Every deal here is a path.",
+      body: "Buying steel without logistics and finance means the cargo waits on someone else’s clock. We close the gap between mill and market.",
+    },
+    {
+      label: "Who wins the market",
+      claim: "The mills taking Europe are not just cheaper on the melt.",
+      body: "They own the thing that turns up when a buyer needs billet, bar or wire — origin, freight and terms in one conversation.",
+    },
+  ],
   tradeTitle: "Specialised traders in metal products.",
   tradeLead:
     "Our core business is sourcing steel and importing it into the EU market for mills, stockists and end users.",

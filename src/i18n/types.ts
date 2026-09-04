@@ -9,6 +9,7 @@ export type Messages = {
   heroTitle: string;
   heroText: string;
   scroll: string;
+  bands: { label: string; claim: string; body: string }[];
   tradeTitle: string;
   tradeLead: string;
   tradeItems: string[];

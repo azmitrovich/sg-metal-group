@@ -1,25 +1,38 @@
 import { useI18n } from "../i18n";
+import { Button009 } from "./Button009";
 
 export function Hero() {
   const { t } = useI18n();
 
   return (
-    <section className="hero" id="top" aria-label={t.brand}>
-      <div className="hero__bg" aria-hidden="true" />
-      <div className="hero__content">
-        <p className="section__eyebrow">{t.heroEyebrow}</p>
-        <h1 className="hero__title">{t.heroTitle}</h1>
-        <p className="hero__text">{t.heroText}</p>
-        <div className="link-row">
-          <a className="btn" href="#contact">
-            {t.cta} →
-          </a>
-          <a className="btn btn--ghost" href="#trade">
-            {t.ctaSecondary}
+    <section className="hero" id="top" data-theme="dark">
+      <div className="container">
+        <p className="hero-eyebrow">
+          <span className="hero-eyebrow__dot" aria-hidden="true" />
+          <span className="hero-eyebrow__text">{t.heroEyebrow}</span>
+        </p>
+        <h1>{t.heroTitle}</h1>
+        <p className="lede">{t.heroText}</p>
+        <div className="hero-ctas">
+          <Button009 href="#contact">{t.cta}</Button009>
+          <a className="btn-link" href="#trade">
+            <span data-button-animate-chars>{t.ctaSecondary}</span>
+            <svg className="arrow" viewBox="0 0 16 16" aria-hidden="true">
+              <path
+                d="M3 8h10M9 4l4 4-4 4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+              />
+            </svg>
           </a>
         </div>
       </div>
-      <span className="hero__scroll">{t.scroll}</span>
+      <div className="hero-scroll" aria-hidden="true">
+        <span>{t.scroll}</span>
+        <span className="bar" />
+      </div>
     </section>
   );
 }

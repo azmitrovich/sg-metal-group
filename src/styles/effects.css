@@ -1,0 +1,192 @@
+.loader {
+  color: var(--bone);
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: var(--spruce-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.45s var(--ease-osmo), visibility 0.45s linear;
+}
+
+.loader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader__mark {
+  position: relative;
+  display: inline-flex;
+  --logo-h: min(42vw, 160px);
+}
+
+.loader__mark .logo {
+  font-size: calc(var(--logo-h) * 0.42);
+  color: var(--bone);
+}
+
+.loader__wipe {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.loader__wipe span {
+  position: absolute;
+  left: 0;
+  background: var(--bone);
+  transform: scaleX(0);
+  transform-origin: right center;
+}
+
+.loader__wipe span:nth-child(1) {
+  top: -1%;
+  width: 66%;
+  height: 31%;
+}
+
+.loader__wipe span:nth-child(2) {
+  top: 35%;
+  width: 52.5%;
+  height: 30%;
+}
+
+.loader__wipe span:nth-child(3) {
+  top: 70.5%;
+  width: 86.5%;
+  height: 30%;
+}
+
+.loader.is-wiping .loader__wipe span {
+  animation: wipeAcross 0.55s var(--ease-osmo) forwards;
+}
+
+.loader.is-wiping .loader__wipe span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.loader.is-wiping .loader__wipe span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes wipeAcross {
+  from {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+  50.1% {
+    transform-origin: right center;
+  }
+  to {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+}
+
+.loader__count {
+  position: absolute;
+  left: 0;
+  bottom: -2.6rem;
+  font-weight: 700;
+  font-size: var(--fs-3xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bone-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.guides {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.guides__inner {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.guides__inner span {
+  border-left: 1px solid var(--line);
+}
+
+.guides__inner span:first-child {
+  border-left: 0;
+}
+
+.on-dark .guides__inner span,
+.band .guides__inner span {
+  border-left-color: var(--line-dark);
+}
+
+@media (max-width: 1099px) {
+  .guides__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .guides__inner span:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+@media (max-width: 759px) {
+  .guides {
+    display: none;
+  }
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-osmo), transform 0.7s var(--ease-osmo);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+[data-scrub-lines] {
+  visibility: hidden;
+}
+
+[data-scrub-lines].is-ready {
+  visibility: visible;
+}
+
+.scrub-line {
+  display: block;
+  overflow: hidden;
+}
+
+.scrub-line span {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0.15;
+  transition: transform 0.7s var(--ease-osmo), opacity 0.7s var(--ease-osmo);
+}
+
+.scrub-line.is-in span {
+  transform: none;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-scrub-lines],
+  .scrub-line span {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: none;
+  }
+}

@@ -1,22 +1,78 @@
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Extrabold.woff2") format("woff2");
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --color-primary: #14291f;
-  --color-primary-deep: #0d1c15;
-  --color-accent: #b01e2a;
-  --color-accent-soft: #e8737d;
-  --color-ink: #15201a;
-  --color-ink-soft: #4a544d;
-  --color-surface: #f2f1ec;
-  --color-surface-alt: #dfdacd;
-  --color-line: rgba(20, 41, 31, 0.14);
-  --color-line-dark: rgba(242, 241, 236, 0.16);
-  --font-display: "Cabinet Grotesk", "Space Grotesk", ui-sans-serif, sans-serif;
-  --font-body: "Satoshi", "DM Sans", ui-sans-serif, sans-serif;
-  --weight-display: 800;
-  --weight-body: 500;
+  --spruce: #14291f;
+  --spruce-deep: #0e1f17;
+  --pillar: #b01e2a;
+  --pillar-dark: #9c1a25;
+  --pillar-light: #c8323f;
+  --pillar-on-dark: #e35965;
+  --paper: #ffffff;
+  --bone: #f2f1ec;
+  --putty: #dfdacd;
+  --sage: #46564c;
+  --line: rgba(20, 41, 31, 0.12);
+  --line-soft: rgba(20, 41, 31, 0.06);
+  --line-strong: rgba(20, 41, 31, 0.28);
+  --line-dark: rgba(242, 241, 236, 0.16);
+  --bone-soft: rgba(242, 241, 236, 0.66);
+  --font-display: "Cabinet Grotesk", sans-serif;
+  --font-body: "Satoshi", sans-serif;
   --radius: 5px;
-  --radius-pill: 999px;
-  --section-y: clamp(4.5rem, 9vw, 7.5rem);
-  --measure: 65ch;
-  --header-h: 4.5rem;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --sec-pad: clamp(5rem, 10vw, 8.5rem);
+  --rail-w: 13.5rem;
+  --header-h: 3.5rem;
+  --mobile-cta-h: 0px;
+  --ease-osmo: cubic-bezier(0.625, 0.05, 0, 1);
+  --ease-soft: cubic-bezier(0.32, 0.72, 0, 1);
+  --rail-marker: 14px;
+  --label-size: 0.64rem;
+  --label-track: 0.14em;
+  --fs-3xs: 0.7rem;
+  --fs-2xs: 0.8rem;
+  --fs-xs: 0.86rem;
+  --fs-sm: 0.92rem;
+  --fs-base: 1.0625rem;
+  --fs-lg: 1.15rem;
+  --arrow-size: 0.75rem;
+  --button-009-color: var(--bone);
+  --button-009-color-background: var(--pillar);
+  --button-009-color-focus: var(--bone);
+  --button-009-border-radius: 2.5em;
+  --button-009-icon-size: var(--arrow-size);
+  --button-009-padding-top: 0.75em;
+  --button-009-padding-right: 0.75em;
+  --button-009-padding-bottom: 0.75em;
+  --button-009-padding-left: 1.15em;
+  --button-009-gap: 0.375em;
+  --button-009-overflow: clip;
+  --button-009-focus-inset: -0.125em;
+  --button-009-click-scale: 0.955 0.925;
+  --button-009-ease-hover: cubic-bezier(0.32, 0.72, 0, 1);
+  --button-009-ease-click: cubic-bezier(0.4, 0, 0.2, 1);
+  --button-009-ease-focus: cubic-bezier(0.32, 0.72, 0, 1);
 }

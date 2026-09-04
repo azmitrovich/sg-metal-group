@@ -1,0 +1,155 @@
+.btn-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  white-space: nowrap;
+  padding: 0.55rem 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-link .arrow {
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  flex: 0 0 auto;
+  transition: translate 0.4s var(--ease-osmo);
+}
+
+.btn-link:hover .arrow {
+  translate: 0.3em;
+}
+
+[data-button-animate-chars] {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  white-space: nowrap;
+  line-height: 1.05;
+}
+
+[data-button-animate-chars] span {
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 1.15em currentcolor;
+  transform: translateY(0) rotate(0.001deg);
+  transition: transform 0.6s var(--ease-osmo);
+}
+
+.nav-link:hover [data-button-animate-chars] span,
+.nav-link.is-active [data-button-animate-chars] span,
+.menu-overlay a:hover [data-button-animate-chars] span,
+.rail-foot a:hover [data-button-animate-chars] span,
+.btn-link:hover [data-button-animate-chars] span {
+  transform: translateY(-1.15em) rotate(0.001deg);
+}
+
+.button-009 {
+  color: var(--button-009-color);
+  user-select: none;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-grid;
+  position: relative;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.01em;
+  transition: scale 0.15s var(--button-009-ease-click);
+  cursor: pointer;
+  border: 0;
+}
+
+.button-009:active {
+  scale: var(--button-009-click-scale);
+}
+
+.button-009__inner {
+  pointer-events: none;
+  gap: var(--button-009-gap);
+  padding: var(--button-009-padding-top) var(--button-009-padding-right)
+    var(--button-009-padding-bottom) var(--button-009-padding-left);
+  z-index: 1;
+  border-radius: var(--button-009-border-radius);
+  overflow: var(--button-009-overflow);
+  grid-area: 1 / 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.button-009__icon {
+  width: var(--button-009-icon-size);
+  height: var(--button-009-icon-size);
+  flex: 0 0 auto;
+  transition: translate 0.5s var(--button-009-ease-hover), opacity 0.15s ease-out;
+}
+
+.button-009__icon.is--left {
+  left: var(--button-009-padding-right);
+  position: absolute;
+  opacity: 0;
+  translate: -1.5em;
+}
+
+.button-009__text {
+  flex: 0 0 auto;
+  transition: translate 0.5s var(--button-009-ease-hover);
+  white-space: nowrap;
+}
+
+.button-009__bg {
+  background-color: var(--button-009-color-background);
+  border-radius: var(--button-009-border-radius);
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.25s;
+}
+
+.button-009:hover .button-009__bg {
+  background-color: var(--pillar-dark);
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .button-009:is(:hover, :focus-visible) .button-009__text {
+    translate: calc(
+      var(--button-009-icon-size) + var(--button-009-gap) +
+        var(--button-009-padding-right) - var(--button-009-padding-left)
+    )
+      0 0;
+    transition: translate 0.5s 75ms var(--button-009-ease-hover);
+  }
+
+  .button-009:is(:hover, :focus-visible) .button-009__icon.is--left {
+    translate: 0;
+    opacity: 1;
+    transition: translate 0.5s 75ms var(--button-009-ease-hover),
+      opacity 0.15s 75ms ease-out;
+  }
+
+  .button-009:is(:hover, :focus-visible) .button-009__icon.is--right {
+    translate: 1.5em;
+    opacity: 0;
+    transition: translate 0.5s 0.05s var(--button-009-ease-hover),
+      opacity 0.15s 75ms ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-link .arrow,
+  [data-button-animate-chars] span {
+    transition: none;
+  }
+}

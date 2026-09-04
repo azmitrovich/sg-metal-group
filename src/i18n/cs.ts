@@ -17,6 +17,18 @@ export const cs: Messages = {
   heroText:
     "SG Metal Group nakupuje kovové výrobky na Blízkém východě a v Africe a dováží je do Evropské unie — s financováním, logistikou a jasnou cestou ke snižování CO₂.",
   scroll: "Scroll",
+  bands: [
+    {
+      label: "Obchod versus tření",
+      claim: "Každý měsíc bez trasy je zpoždění. Každý obchod zde je cesta.",
+      body: "Kupovat ocel bez logistiky a financí znamená čekat na cizí hodiny. Uzavíráme mezeru mezi hutí a trhem.",
+    },
+    {
+      label: "Kdo bere trh",
+      claim: "Hutě, které berou Evropu, nejsou jen levnější na tavení.",
+      body: "Vlastní to, co se objeví, když kupující potřebuje sochor, tyč nebo drát — původ, dopravu a podmínky v jednom rozhovoru.",
+    },
+  ],
   tradeTitle: "Specializovaný obchod s kovovými výrobky.",
   tradeLead:
     "Naším jádrem je nákup oceli a její dovoz na trh EU pro hutě, sklady i koncové odběratele.",

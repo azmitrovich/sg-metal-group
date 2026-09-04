@@ -1,37 +1,27 @@
-import { useEffect, useState } from "react";
 import { useI18n } from "../i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Logo } from "./Logo";
+import { Button009 } from "./Button009";
 
-type HeaderProps = {
+type Props = {
   open: boolean;
   onToggle: () => void;
   onNavigate: (id: string) => void;
 };
 
-export function Header({ open, onToggle, onNavigate }: HeaderProps) {
+export function Header({ open, onToggle, onNavigate }: Props) {
   const { t } = useI18n();
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
-      <header
-        className={`site-header${scrolled || open ? " is-scrolled" : ""}${open ? " is-open" : ""}`}
-      >
-        <div className="site-header__inner">
+      <header className={`site-header${open ? " is-scrolled" : ""}`} data-header>
+        <div className="container">
           <Logo />
-          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <div className="header-tools">
             <LanguageSwitcher />
             <button
               type="button"
-              className="menu-toggle"
+              className="burger"
               aria-expanded={open}
               aria-label={open ? t.menuClose : t.menuOpen}
               onClick={onToggle}
@@ -42,34 +32,38 @@ export function Header({ open, onToggle, onNavigate }: HeaderProps) {
           </div>
         </div>
       </header>
-      <nav className={`nav-panel${open ? " is-open" : ""}`} aria-hidden={!open}>
-        <ol>
-          {t.nav.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate(item.id);
-                }}
-              >
-                <span className="nav-panel__index">{item.label.slice(0, 3)}</span>
-                <span>{item.label.slice(4)}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-        <a
-          className="btn"
-          href="#contact"
-          onClick={(e) => {
-            e.preventDefault();
-            onNavigate("contact");
-          }}
-        >
-          {t.cta} →
-        </a>
-      </nav>
+      <div className="menu-overlay">
+        <nav>
+          <ol>
+            {t.nav.map((item) => {
+              const [idx, ...rest] = item.label.split("_");
+              return (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate(item.id);
+                    }}
+                  >
+                    <span className="idx">{idx}_</span>
+                    <span data-button-animate-chars>{rest.join("_").trim()}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
+        <div className="menu-cta">
+          <Button009
+            href="#contact"
+            onClick={() => onNavigate("contact")}
+          >
+            {t.cta}
+          </Button009>
+        </div>
+        <p className="menu-strap">{t.footerTitle}</p>
+      </div>
     </>
   );
 }

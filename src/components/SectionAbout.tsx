@@ -2,13 +2,14 @@ import { useI18n } from "../i18n";
 
 export function SectionAbout() {
   const { t } = useI18n();
-
   return (
-    <section className="section section--dark" id="about">
-      <div className="wrap">
-        <p className="section__eyebrow">{t.nav[4].label}</p>
-        <h2 className="section__title">{t.aboutTitle}</h2>
-        <p className="section__lead">{t.aboutLead}</p>
+    <section className="on-dark" id="about" data-theme="dark" data-reveal>
+      <div className="container">
+        <div className="sec-head">
+          <p className="small-caps-label">{t.nav[4].label}</p>
+          <h2>{t.aboutTitle}</h2>
+          <p className="soft">{t.aboutLead}</p>
+        </div>
         <div className="about-stats">
           {t.aboutPoints.map((point) => (
             <article className="feature" key={point.label}>
@@ -18,8 +19,8 @@ export function SectionAbout() {
           ))}
         </div>
         <div className="about-block">
-          <h2 className="section__title">{t.processTitle}</h2>
-          <p className="section__lead">{t.processLead}</p>
+          <h2>{t.processTitle}</h2>
+          <p className="soft">{t.processLead}</p>
           <div className="steps">
             {t.steps.map((step) => (
               <article className="step" key={step.title}>
@@ -30,7 +31,7 @@ export function SectionAbout() {
           </div>
         </div>
         <div className="about-block">
-          <h2 className="section__title">{t.faqTitle}</h2>
+          <h2>{t.faqTitle}</h2>
           <div className="faq">
             {t.faqs.map((item, index) => (
               <details key={item.q}>
