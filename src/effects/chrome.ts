@@ -34,25 +34,57 @@ export function runLoader(onDone: () => void) {
 export function initRailTheme() {
   const rail = document.querySelector<HTMLElement>(".side-rail");
   const top = document.querySelector<HTMLElement>(".top-cta");
-  const sections = document.querySelectorAll<HTMLElement>("[data-theme]");
+  const sections = [...document.querySelectorAll<HTMLElement>("[data-theme]")];
   if (!rail || !sections.length) return () => undefined;
 
-  const sync = () => {
+  const links = [...rail.querySelectorAll<HTMLElement>(".nav-link")];
+  const foot = rail.querySelector<HTMLElement>(".rail-foot");
+
+  const themeAt = (viewportY: number) => {
+    const y = window.scrollY + viewportY;
     let theme = "dark";
-    const y = window.scrollY + window.innerHeight * 0.28;
-    sections.forEach((section) => {
+    for (const section of sections) {
       const rect = section.getBoundingClientRect();
       const topY = rect.top + window.scrollY;
       const bottomY = topY + rect.height;
-      if (y >= topY && y < bottomY) theme = section.dataset.theme || "dark";
+      if (y >= topY && y < bottomY) {
+        theme = section.dataset.theme || "dark";
+        break;
+      }
+    }
+    return theme;
+  };
+
+  const sync = () => {
+    const brand = rail.querySelector<HTMLElement>(".brand");
+    const brandY = brand
+      ? brand.getBoundingClientRect().top + brand.offsetHeight / 2
+      : window.innerHeight * 0.12;
+    rail.setAttribute("data-rail", themeAt(brandY));
+
+    links.forEach((link) => {
+      const y = link.getBoundingClientRect().top + link.offsetHeight / 2;
+      link.dataset.rail = themeAt(y);
     });
-    rail.setAttribute("data-rail", theme);
-    top?.setAttribute("data-rail", theme);
+
+    if (foot) {
+      const y = foot.getBoundingClientRect().top + foot.offsetHeight / 2;
+      foot.dataset.rail = themeAt(y);
+    }
+
+    if (top) {
+      const y = top.getBoundingClientRect().top + top.offsetHeight / 2;
+      top.setAttribute("data-rail", themeAt(y));
+    }
   };
 
   sync();
   window.addEventListener("scroll", sync, { passive: true });
-  return () => window.removeEventListener("scroll", sync);
+  window.addEventListener("resize", sync);
+  return () => {
+    window.removeEventListener("scroll", sync);
+    window.removeEventListener("resize", sync);
+  };
 }
 
 export function initRailMarker() {
