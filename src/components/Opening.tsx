@@ -1,5 +1,6 @@
 import { useI18n } from "../i18n";
 import { Hero } from "./Hero";
+import heroStill from "../assets/hero.jpg";
 
 export function Opening() {
   const { t } = useI18n();
@@ -7,7 +8,7 @@ export function Opening() {
   return (
     <div className="opening">
       <div className="opening__media" aria-hidden="true">
-        <img className="hero-still" src="/hero.jpg" alt="" />
+        <img className="hero-still" src={heroStill} alt="" />
       </div>
       <Hero />
       {t.bands.map((band) => (
