@@ -1,0 +1,20 @@
+---
+description: Limit source files to 200 lines maximum
+alwaysApply: true
+---
+
+# Max 200 lines per file
+
+Never write or leave a source file longer than **200 lines**.
+
+- Split by component, section, locale, hook, or utility when approaching the limit
+- Prefer many focused files over one large module
+- Styles: split by page/section; avoid dumping all CSS into one file
+- Translations: one locale file (or section file) per language chunk if needed
+
+```text
+❌ BAD: HomePage.tsx with hero + pricing + FAQ + footer (400+ lines)
+✅ GOOD: Hero.tsx, Pricing.tsx, Faq.tsx, Footer.tsx each under 200 lines
+```
+
+Before finishing an edit, count lines. If over 200, extract code into a new file first.
