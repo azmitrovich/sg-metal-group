@@ -1,4 +1,4 @@
-.site-header {
+﻿.site-header {
   position: fixed;
   inset: 0 0 auto;
   z-index: 60;
@@ -33,47 +33,29 @@
 }
 
 .site-header .brand {
-  --logo-h: 22px;
+  --logo-h: 44px;
 }
 
-.logo {
-  display: grid;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: calc(var(--logo-h, 22px) * 0.72);
-  line-height: 0.95;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.logo-img {
+  display: block;
+  height: var(--logo-h, 44px);
+  width: auto;
 }
 
-.logo__row {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 0.35rem;
+.logo-img--on-light {
+  display: none;
 }
 
-.logo .patch {
-  width: 0.35rem;
-  height: 0.95em;
-  background: var(--pillar);
-  display: inline-block;
-  transform-origin: center top;
-  animation: patchDraw 0.6s var(--ease-osmo) both;
-  transition: transform 0.9s var(--ease-osmo);
+.brand--light .logo-img--on-dark,
+.side-rail[data-rail="light"] .logo-img--on-dark {
+  display: none;
 }
 
-.brand:hover .patch {
-  transform: scaleY(0);
+.brand--light .logo-img--on-light,
+.side-rail[data-rail="light"] .logo-img--on-light {
+  display: block;
 }
 
-@keyframes patchDraw {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
 
 @media (min-width: 1100px) {
   .site-header {

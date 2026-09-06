@@ -1,4 +1,4 @@
-.side-rail {
+﻿.side-rail {
   display: none;
   position: fixed;
   inset: 0 auto 0 0;
@@ -35,7 +35,7 @@
 }
 
 .side-rail .brand {
-  --logo-h: 30px;
+  --logo-h: 56px;
 }
 
 .side-rail .nav-link {

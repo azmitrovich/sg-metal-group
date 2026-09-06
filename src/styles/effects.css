@@ -1,4 +1,4 @@
-.loader {
+﻿.loader {
   color: var(--bone);
   position: fixed;
   inset: 0;
@@ -22,9 +22,10 @@
   --logo-h: min(42vw, 160px);
 }
 
-.loader__mark .logo {
-  font-size: calc(var(--logo-h) * 0.42);
-  color: var(--bone);
+.loader__mark .logo-img--loader {
+  height: var(--logo-h);
+  width: auto;
+  display: block;
 }
 
 .loader__wipe {

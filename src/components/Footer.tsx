@@ -1,5 +1,6 @@
-import { useI18n } from "../i18n";
+﻿import { useI18n } from "../i18n";
 import { Button009 } from "./Button009";
+import { Logo } from "./Logo";
 
 export function Footer() {
   const { t } = useI18n();
@@ -7,6 +8,7 @@ export function Footer() {
     <footer className="site-footer" data-theme="dark">
       <div className="container site-footer__grid">
         <div>
+          <Logo className="site-footer__logo" />
           <h2>{t.footerTitle}</h2>
           <p>{t.footerText}</p>
         </div>

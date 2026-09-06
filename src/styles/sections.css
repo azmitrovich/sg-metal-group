@@ -1,4 +1,4 @@
-.feature-grid {
+﻿.feature-grid {
   display: grid;
   gap: 1.5rem;
   margin-top: 2.5rem;
@@ -47,7 +47,7 @@
 }
 
 .bullet-list li::before {
-  content: "▶";
+  content: "в–¶";
   color: var(--pillar);
   font-size: 0.7rem;
   margin-top: 0.35rem;
@@ -169,4 +169,9 @@
 .contact-form textarea {
   min-height: 7rem;
   resize: vertical;
+}
+
+.site-footer__logo {
+  --logo-h: 72px;
+  margin-bottom: 1.25rem;
 }

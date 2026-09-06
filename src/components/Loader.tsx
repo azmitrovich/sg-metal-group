@@ -1,17 +1,17 @@
+const base = import.meta.env.BASE_URL;
+
 export function Loader() {
   return (
     <div className="loader" aria-hidden="true">
       <div className="loader__mark">
-        <span
-          className="logo"
-          style={{ color: "var(--bone)", ["--logo-h" as string]: "min(42vw, 160px)" }}
-        >
-          <span>SG Metal</span>
-          <span className="logo__row">
-            Group
-            <span className="patch" />
-          </span>
-        </span>
+        <img
+          className="logo-img logo-img--loader"
+          src={`${base}logo-on-dark-bg.png`}
+          alt=""
+          width={558}
+          height={640}
+          decoding="async"
+        />
         <div className="loader__wipe">
           <span />
           <span />
