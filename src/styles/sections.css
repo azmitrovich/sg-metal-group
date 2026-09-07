@@ -47,7 +47,7 @@
 }
 
 .bullet-list li::before {
-  content: "в–¶";
+  content: "\25B6";
   color: var(--pillar);
   font-size: 0.7rem;
   margin-top: 0.35rem;
