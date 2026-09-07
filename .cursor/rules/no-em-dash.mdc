@@ -1,0 +1,17 @@
+---
+description: Use hyphen (-) instead of em dash (—)
+alwaysApply: true
+---
+
+# No em dashes
+
+Never use the em dash character (`—`). Always use a plain hyphen (`-`) instead.
+
+Applies to UI copy, translations, meta tags, README, comments, and any other text in the repo.
+
+```text
+❌ BAD: Trade, finance and logistics — in one conversation.
+✅ GOOD: Trade, finance and logistics - in one conversation.
+```
+
+Before finishing an edit, search for `—` and replace any matches with `-`.

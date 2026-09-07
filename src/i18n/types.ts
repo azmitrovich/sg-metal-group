@@ -32,13 +32,24 @@ export type Messages = {
   faqs: { q: string; a: string }[];
   contactTitle: string;
   contactLead: string;
-  form: {
-    name: string;
-    company: string;
+  contactPage: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    addressLabel: string;
+    addressKind: string;
+    addressLines: string[];
+    contactLabel: string;
+    phone: string;
     email: string;
-    message: string;
-    submit: string;
-    success: string;
+    emailNote: string;
+    legalLabel: string;
+    legalLines: string[];
+    bankLabel: string;
+    bankLines: string[];
+    mapOpen: string;
+    mapQuery: string;
+    teaserCta: string;
   };
   footerTitle: string;
   footerText: string;

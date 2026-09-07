@@ -12,11 +12,6 @@ export function Loader() {
           height={640}
           decoding="async"
         />
-        <div className="loader__wipe">
-          <span />
-          <span />
-          <span />
-        </div>
         <div className="loader__count">000</div>
       </div>
     </div>

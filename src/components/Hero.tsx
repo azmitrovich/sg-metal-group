@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { useI18n } from "../i18n";
 import { Button009 } from "./Button009";
 
 export function Hero() {
   const { t } = useI18n();
+  const navigate = useNavigate();
 
   return (
     <section className="hero" id="top" data-theme="dark">
@@ -14,7 +16,7 @@ export function Hero() {
         <h1>{t.heroTitle}</h1>
         <p className="lede">{t.heroText}</p>
         <div className="hero-ctas">
-          <Button009 href="#contact">{t.cta}</Button009>
+          <Button009 onClick={() => navigate("/contact")}>{t.cta}</Button009>
           <a className="btn-link" href="#trade">
             <span data-button-animate-chars>{t.ctaSecondary}</span>
             <svg className="arrow" viewBox="0 0 16 16" aria-hidden="true">

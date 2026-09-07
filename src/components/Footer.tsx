@@ -1,9 +1,15 @@
-﻿import { useI18n } from "../i18n";
+import { useNavigate } from "react-router-dom";
+import { useI18n } from "../i18n";
 import { Button009 } from "./Button009";
 import { Logo } from "./Logo";
 
-export function Footer() {
+type FooterProps = {
+  showCta?: boolean;
+};
+
+export function Footer({ showCta = true }: FooterProps) {
   const { t } = useI18n();
+  const navigate = useNavigate();
   return (
     <footer className="site-footer" data-theme="dark">
       <div className="container site-footer__grid">
@@ -12,9 +18,11 @@ export function Footer() {
           <h2>{t.footerTitle}</h2>
           <p>{t.footerText}</p>
         </div>
-        <div>
-          <Button009 href="#contact">{t.cta}</Button009>
-        </div>
+        {showCta ? (
+          <div>
+            <Button009 onClick={() => navigate("/contact")}>{t.cta}</Button009>
+          </div>
+        ) : null}
       </div>
       <div className="container site-footer__meta">{t.footerMeta}</div>
     </footer>
@@ -23,13 +31,14 @@ export function Footer() {
 
 export function MobileCta() {
   const { t } = useI18n();
+  const navigate = useNavigate();
   return (
     <div className="mobile-cta">
       <p className="mobile-cta__from">
         {t.stickyLabel}
         <b>{t.brand}</b>
       </p>
-      <Button009 href="#contact">{t.cta}</Button009>
+      <Button009 onClick={() => navigate("/contact")}>{t.cta}</Button009>
     </div>
   );
 }

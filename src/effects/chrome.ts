@@ -20,13 +20,10 @@ export function runLoader(onDone: () => void) {
       count.textContent = String(Math.round(state.value)).padStart(3, "0");
     },
     onComplete: () => {
-      loader.classList.add("is-wiping");
-      window.setTimeout(() => {
-        loader.classList.add("is-done");
-        document.body.classList.remove("is-loading");
-        document.querySelector(".opening")?.classList.add("is-ready");
-        onDone();
-      }, 650);
+      loader.classList.add("is-done");
+      document.body.classList.remove("is-loading");
+      document.querySelector(".opening")?.classList.add("is-ready");
+      onDone();
     },
   });
 }

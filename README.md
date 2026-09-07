@@ -1,6 +1,6 @@
-# SG Metal Group
+﻿# SG Metal Group
 
-Corporate site for SG Metal Group — steel trade and import into the EU (trade, finance, logistics, sustainability).
+Corporate site for SG Metal Group - steel trade and import into the EU (trade, finance, logistics, sustainability).
 
 ## Stack
 

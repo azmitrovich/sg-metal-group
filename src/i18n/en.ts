@@ -1,4 +1,4 @@
-import type { Messages } from "./types";
+﻿import type { Messages } from "./types";
 
 export const en: Messages = {
   brand: "SG Metal Group",
@@ -15,7 +15,7 @@ export const en: Messages = {
   heroEyebrow: "Steel trade and import into the EU",
   heroTitle: "From mill to market.",
   heroText:
-    "SG Metal Group sources metal products across the Middle East and Africa and brings them into the European Union — with financing, logistics and a clear CO₂ path built in.",
+    "SG Metal Group sources metal products across the Middle East and Africa and brings them into the European Union - with financing, logistics and a clear CO₂ path built in.",
   scroll: "Scroll",
   bands: [
     {
@@ -26,7 +26,7 @@ export const en: Messages = {
     {
       label: "Who wins the market",
       claim: "The mills taking Europe are not just cheaper on the melt.",
-      body: "They own the thing that turns up when a buyer needs billet, bar or wire — origin, freight and terms in one conversation.",
+      body: "They own the thing that turns up when a buyer needs billet, bar or wire - origin, freight and terms in one conversation.",
     },
   ],
   tradeTitle: "Specialised traders in metal products.",
@@ -77,11 +77,11 @@ export const en: Messages = {
   sustainItems: [
     "We finance measures that reduce CO₂ intensity at source.",
     "We prioritise products with a verified low CO₂ footprint.",
-    "We favour EAF routes using scrap or DRI — the cleaner production path.",
+    "We favour EAF routes using scrap or DRI - the cleaner production path.",
   ],
   aboutTitle: "One group. Accountable end to end.",
   aboutLead:
-    "SG Metal Group connects mills, carriers and buyers. Trade, finance and logistics sit in one conversation — not three separate queues.",
+    "SG Metal Group connects mills, carriers and buyers. Trade, finance and logistics sit in one conversation - not three separate queues.",
   aboutPoints: [
     { label: "Focus", value: "EU steel import" },
     { label: "Origins", value: "Middle East & Africa" },
@@ -125,14 +125,37 @@ export const en: Messages = {
   ],
   contactTitle: "Own the supply line.",
   contactLead:
-    "Share volumes, destinations and timing. We come back with a clear path — product, finance and freight.",
-  form: {
-    name: "Your name",
-    company: "Company",
-    email: "Email",
-    message: "What do you need?",
-    submit: "Send enquiry",
-    success: "Received — we will reply within one working day.",
+    "Share volumes, destinations and timing. We come back with a clear path - product, finance and freight.",
+  contactPage: {
+    eyebrow: "Contact",
+    title: "SG Metal Group LLP",
+    subtitle: "Registered office, contact details and map.",
+    addressLabel: "Address",
+    addressKind: "Registered office / Postal",
+    addressLines: [
+      "050012, Almaty, Almaly district",
+      "Shevchenko St., building 97",
+      "Republic of Kazakhstan",
+    ],
+    contactLabel: "Contact",
+    phone: "",
+    email: "trade@sgmetalgroup.com",
+    emailNote: "Trade desk",
+    legalLabel: "Legal",
+    legalLines: [
+      "SG Metal Group LLP (TOO \"SG METAL GROUP\")",
+      "BIN 191140006428",
+      "Registered 07.11.2019",
+      "Director: Serikova Gulzana Beibitkyzy",
+      "OKED 46771 - wholesale of ferrous and non-ferrous scrap",
+    ],
+    bankLabel: "Bank details",
+    bankLines: [
+      "Shared on confirmed enquiry",
+    ],
+    mapOpen: "Open in Maps",
+    mapQuery: "Almaty, Shevchenko 97",
+    teaserCta: "Open contact page",
   },
   footerTitle: "Steel trade with logistics and finance built in.",
   footerText:

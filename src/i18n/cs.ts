@@ -1,4 +1,4 @@
-import type { Messages } from "./types";
+﻿import type { Messages } from "./types";
 
 export const cs: Messages = {
   brand: "SG Metal Group",
@@ -15,7 +15,7 @@ export const cs: Messages = {
   heroEyebrow: "Obchod s ocelí a dovoz do EU",
   heroTitle: "Z hutě na trh.",
   heroText:
-    "SG Metal Group nakupuje kovové výrobky na Blízkém východě a v Africe a dováží je do Evropské unie — s financováním, logistikou a jasnou cestou ke snižování CO₂.",
+    "SG Metal Group nakupuje kovové výrobky na Blízkém východě a v Africe a dováží je do Evropské unie - s financováním, logistikou a jasnou cestou ke snižování CO₂.",
   scroll: "Scroll",
   bands: [
     {
@@ -26,7 +26,7 @@ export const cs: Messages = {
     {
       label: "Kdo bere trh",
       claim: "Hutě, které berou Evropu, nejsou jen levnější na tavení.",
-      body: "Vlastní to, co se objeví, když kupující potřebuje sochor, tyč nebo drát — původ, dopravu a podmínky v jednom rozhovoru.",
+      body: "Vlastní to, co se objeví, když kupující potřebuje sochor, tyč nebo drát - původ, dopravu a podmínky v jednom rozhovoru.",
     },
   ],
   tradeTitle: "Specializovaný obchod s kovovými výrobky.",
@@ -71,17 +71,17 @@ export const cs: Messages = {
       text: "Místa vykládky tak, aby zboží dorazilo přesně včas.",
     },
   ],
-  sustainTitle: "Ocel s nižším CO₂ — záměrný výběr.",
+  sustainTitle: "Ocel s nižším CO₂ - záměrný výběr.",
   sustainLead:
     "Klimatická pravidla EU pro ocel se zpřísňují. S vývozci pracujeme na emisích a prioritě dodávek s nižším CO₂.",
   sustainItems: [
     "Financujeme opatření ke snížení uhlíkové náročnosti u zdroje.",
     "Preferujeme výrobky s ověřenou nízkou stopou CO₂.",
-    "Upřednostňujeme EAF na šrotu nebo DRI — čistší výrobní cestu.",
+    "Upřednostňujeme EAF na šrotu nebo DRI - čistší výrobní cestu.",
   ],
   aboutTitle: "Jedna skupina. Odpovědnost od začátku do konce.",
   aboutLead:
-    "SG Metal Group propojuje hutě, dopravce a kupující. Obchod, finance a logistika v jednom rozhovoru — ne ve třech frontách.",
+    "SG Metal Group propojuje hutě, dopravce a kupující. Obchod, finance a logistika v jednom rozhovoru - ne ve třech frontách.",
   aboutPoints: [
     { label: "Zaměření", value: "Dovoz oceli do EU" },
     { label: "Původ", value: "Blízký východ a Afrika" },
@@ -108,7 +108,7 @@ export const cs: Messages = {
   faqs: [
     {
       q: "Jaké produkty obchodujete?",
-      a: "Polotovary — sochory čtvercové a kruhové, blomy; hotové — betonářská ocel, válcovaný drát a kruhové tyče.",
+      a: "Polotovary - sochory čtvercové a kruhové, blomy; hotové - betonářská ocel, válcovaný drát a kruhové tyče.",
     },
     {
       q: "Dovážíte pouze do EU?",
@@ -125,14 +125,37 @@ export const cs: Messages = {
   ],
   contactTitle: "Mějte dodavatelský řetězec pod kontrolou.",
   contactLead:
-    "Napište objemy, destinace a termíny. Vrátíme se s jasnou cestou — produkt, finance a doprava.",
-  form: {
-    name: "Vaše jméno",
-    company: "Společnost",
-    email: "Email",
-    message: "Co potřebujete?",
-    submit: "Odeslat poptávku",
-    success: "Přijato — odpovíme do jednoho pracovního dne.",
+    "Napište objemy, destinace a termíny. Vrátíme se s jasnou cestou - produkt, finance a doprava.",
+  contactPage: {
+    eyebrow: "Kontakt",
+    title: "SG Metal Group LLP",
+    subtitle: "Sídlo, údaje o společnosti a mapa.",
+    addressLabel: "Adresa",
+    addressKind: "Sídlo / korespondenční",
+    addressLines: [
+      "050012, Almaty, okres Almaly",
+      "ul. Ševčenko, budova 97",
+      "Kazašská republika",
+    ],
+    contactLabel: "Kontakt",
+    phone: "",
+    email: "trade@sgmetalgroup.com",
+    emailNote: "Obchodní desk",
+    legalLabel: "Právní údaje",
+    legalLines: [
+      "SG Metal Group LLP (TOO \"SG METAL GROUP\")",
+      "BIN 191140006428",
+      "Registrace: 07.11.2019",
+      "Ředitelka: Serikova Gulzana Beibitkyzy",
+      "OKED 46771 - velkoobchod se šrotem černých a barevných kovů",
+    ],
+    bankLabel: "Bankovní spojení",
+    bankLines: [
+      "Pošleme po potvrzení poptávky",
+    ],
+    mapOpen: "Otevřít v Maps",
+    mapQuery: "Almaty, Shevchenko 97",
+    teaserCta: "Otevřít kontaktní stránku",
   },
   footerTitle: "Obchod s ocelí s logistikou a financemi uvnitř.",
   footerText:
