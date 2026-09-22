@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 64" fill="none" role="img" aria-label="SG Metal Group">
-  <text x="0" y="26" font-family="Space Grotesk, Arial Black, sans-serif" font-size="22" font-weight="800" letter-spacing="0.04em" fill="#2C2F36">SG METAL</text>
-  <text x="0" y="54" font-family="Space Grotesk, Arial Black, sans-serif" font-size="22" font-weight="800" letter-spacing="0.04em" fill="#0A5EA8">GROUP</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" fill="none" role="img" aria-label="SG Metal Group">
+  <path fill="#8F9396" d="M18 46 92 22 92 48 18 72z"/>
+  <path fill="#052E5A" d="M92 22 292 22 292 48 92 48z"/>
+  <path fill="#8F9396" d="M18 84 92 60 92 96 18 120z"/>
+  <path fill="#052E5A" d="M92 60 292 60 292 96 92 96z"/>
+  <path fill="#8F9396" d="M18 132 92 108 92 144 18 168z"/>
+  <path fill="#052E5A" d="M92 108 292 108 292 144 92 144z"/>
+  <path fill="#8F9396" d="M18 180 92 156 92 192 18 216z"/>
+  <path fill="#052E5A" d="M92 156 292 156 292 192 92 192z"/>
+  <text x="328" y="128" fill="#052E5A" font-family="Arial Black, sans-serif" font-size="92" font-weight="800">SG</text>
+  <text x="332" y="176" fill="#052E5A" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1.5">METAL GROUP</text>
 </svg>
